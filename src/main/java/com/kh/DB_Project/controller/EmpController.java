@@ -1,7 +1,7 @@
-package com.kh.OracleSpring.controller;
+package com.kh.DB_Project.controller;
 
-import com.kh.OracleSpring.dao.EmpDAO;
-import com.kh.OracleSpring.vo.EmpVO;
+import com.kh.DB_Project.dao.EmpDAO;
+import com.kh.DB_Project.vo.EmpVO;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;

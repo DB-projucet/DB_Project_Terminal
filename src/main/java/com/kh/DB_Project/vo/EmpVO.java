@@ -1,4 +1,4 @@
-package com.kh.OracleSpring.vo;
+package com.kh.DB_Project.vo;
 import lombok.*;
 import org.springframework.format.annotation.DateTimeFormat;
 
