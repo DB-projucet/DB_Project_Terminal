@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>New Employee</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="container">
+<div class="form-container">
+    <h1>신규 사원 등록</h1>
+    <form th:action="@{/emp/insert}" th:object="${employees}" method="post">
+        <div>
+            <label for="empNO">사원 번호</label>
+            <input type="text" id="empNO" th:field="*{empNO}" />
+        </div>
+        <div>
+            <label for="name">이름</label>
+            <input type="text" id="name" th:field="*{name}" />
+        </div>
+        <div>
+            <label for="job">직책</label>
+            <input type="text" id="job" th:field="*{job}" />
+        </div>
+        <div>
+            <label for="mgr">상급자 번호</label>
+            <input type="text" id="mgr" th:field="*{mgr}" />
+        </div>
+        <div>
+            <label for="hireDate">입사일</label>
+            <input type="date" id="hireDate" th:field="*{date}" />
+        </div>
+        <div>
+            <label for="salary">급여</label>
+            <input type="text" id="salary" th:field="*{sal}" />
+        </div>
+        <div>
+            <label for="comm">성과급</label>
+            <input type="text" id="comm" th:field="*{comm}" />
+        </div>
+        <div>
+            <label for="deptNO">부서 번호</label>
+            <input type="text" id="deptNO" th:field="*{deptNO}" />
+        </div>
+        <div>
+            <button type="submit">등록</button>
+        </div>
+    </form>
+</div>
+</body>
+</html>

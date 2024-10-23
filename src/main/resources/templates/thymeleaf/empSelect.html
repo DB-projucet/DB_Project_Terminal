@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html xmlns:th="http:/www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body class="container">
+<h2>사원 정보</h2>
+<table >
+    <thead>
+    <tr>
+        <th>사원 아이디</th>
+        <th>사원 이름</th>
+        <th>직책</th>
+        <th>상관 사원 번호</th>
+        <th>입사일</th>
+        <th>급여</th>
+        <th>성과급</th>
+        <th>부서번호</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="emp : ${employees}">
+        <td th:text="${emp.empNO}"></td>
+        <td th:text="${emp.name}"></td>
+        <td th:text="${emp.job}"></td>
+        <td th:text="${emp.mgr}"></td>
+        <td th:text="${emp.date}"></td>
+        <td th:text="${emp.sal}"></td>
+        <td th:text="${emp.comm}"></td>
+        <td th:text="${emp.deptNO}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
